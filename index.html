@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoLife - Sustainable Living</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #1b5e20;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') no-repeat center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EcoLife</h1>
+  <p>Your Guide to Sustainable Living</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#tips">Tips</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  Live Green. Live Better.
+</div>
+
+<div class="container">
+  <section id="tips">
+    <h2>Sustainability Tips</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Reduce Waste</h3>
+        <p>Use reusable bags, bottles, and containers to minimize daily waste.</p>
+      </div>
+      <div class="card">
+        <h3>Save Energy</h3>
+        <p>Switch to LED lights and unplug devices when not in use.</p>
+      </div>
+      <div class="card">
+        <h3>Eco Transport</h3>
+        <p>Use public transport, cycle, or carpool to reduce carbon emissions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>EcoLife is a simple demo website created to promote awareness about sustainable living practices. This is a dummy webpage built using HTML and CSS.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Want to learn more? Click the button below.</p>
+    <button onclick="showMessage()">Get Info</button>
+    <p id="message"></p>
+  </section>
+</div>
+
+<footer>
+  <p>© 2026 EcoLife | Dummy Website</p>
+</footer>
+
+<script>
+  function showMessage() {
+    document.getElementById("message").innerText = "Thanks for your interest! This is just a demo site.";
+  }
+</script>
+
+</body>
+</html>
