@@ -3,103 +3,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrowthPro - Digital Solutions</title>
+  <title>ScaleForge - Growth Engineering Studio</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; color: #333; }
-    header { background: #0d47a1; color: white; padding: 20px; text-align: center; }
-    nav { display: flex; justify-content: center; gap: 20px; background: #1565c0; padding: 10px; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    .hero { padding: 80px 20px; text-align: center; background: #e3f2fd; }
-    .hero h1 { font-size: 2.8rem; }
-    .hero p { font-size: 1.2rem; margin: 20px 0; }
-    .btn { background: #0d47a1; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    .section { padding: 50px 20px; max-width: 1100px; margin: auto; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; }
-    .form-box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
-    input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-    footer { background: #0d47a1; color: white; text-align: center; padding: 20px; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #0b0f1a; color: #eaeef6; }
+    
+    header {
+      background: linear-gradient(90deg, #111827, #1f2937);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 1px solid #2d3748;
+    }
+
+    header h1 { margin: 0; font-size: 2rem; letter-spacing: 1px; }
+    header p { color: #9ca3af; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 20px;
+      text-align: center;
+      background: radial-gradient(circle at center, #1f2937, #020617);
+    }
+
+    .hero h1 { font-size: 3rem; max-width: 800px; }
+    .hero p { color: #9ca3af; margin: 20px 0; }
+
+    .cta-primary {
+      background: #22c55e;
+      color: black;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cta-secondary {
+      margin-top: 15px;
+      background: transparent;
+      border: 1px solid #374151;
+      color: #d1d5db;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    .section {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #22c55e;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      background: #020617;
+      padding: 40px 20px;
+    }
+
+    .stat h2 { color: #22c55e; margin: 0; }
+    .stat p { color: #9ca3af; }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .price-card {
+      background: #111827;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #374151;
+    }
+
+    .price-card h3 { margin-top: 0; }
+    .price-card button { margin-top: 15px; }
+
+    .form-box {
+      background: #111827;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #020617;
+      border: 1px solid #374151;
+      color: white;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 30px;
+      color: #6b7280;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #22c55e;
+      color: black;
+      padding: 12px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>GrowthPro</h1>
-  <p>Scale Your Business with Data-Driven Digital Solutions</p>
+  <h1>ScaleForge</h1>
+  <p>Engineering Growth Systems, Not Just Campaigns</p>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+  <div>
+    <a href="#">Home</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#results">Results</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+  <div>
+    <a href="#contact">Book Demo</a>
+  </div>
 </nav>
 
 <section class="hero">
-  <h1>Drive More Leads. Increase Revenue.</h1>
-  <p>We help businesses grow through performance marketing, SEO, and conversion optimization.</p>
-  <button class="btn" onclick="scrollToForm()">Get Free Consultation</button>
+  <h1>Stop Running Ads. Start Building Growth Engines.</h1>
+  <p>We design scalable acquisition systems using performance marketing, CRO, and first-party data.</p>
+  <button class="cta-primary" onclick="scrollToForm()">Get Growth Audit</button>
+  <button class="cta-secondary" onclick="alert('Case studies coming soon')">View Case Studies</button>
 </section>
 
-<section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card"><h3>Performance Marketing</h3><p>Run high-converting campaigns across Google, Meta, and more to maximize ROI.</p></div>
-    <div class="card"><h3>SEO Optimization</h3><p>Improve your organic visibility and rank higher on search engines.</p></div>
-    <div class="card"><h3>Conversion Rate Optimization</h3><p>Turn more visitors into customers with data-backed UX improvements.</p></div>
-    <div class="card"><h3>Analytics & Tracking</h3><p>Set up GA4, GTM, and advanced tracking to measure performance accurately.</p></div>
+<section class="stats">
+  <div class="stat">
+    <h2>3.2X</h2>
+    <p>Avg ROAS Increase</p>
+  </div>
+  <div class="stat">
+    <h2>120+</h2>
+    <p>Brands Scaled</p>
+  </div>
+  <div class="stat">
+    <h2>$50M+</h2>
+    <p>Ad Spend Managed</p>
   </div>
 </section>
 
-<section class="section" id="about">
-  <h2>About GrowthPro</h2>
-  <p>GrowthPro is a full-service digital marketing agency focused on delivering measurable business results. Our team of experts specializes in paid media, SEO, analytics, and landing page optimization. We combine creativity with data to help brands scale efficiently.</p>
-  <p>With experience across e-commerce, SaaS, and service-based industries, we understand what it takes to build and execute high-impact campaigns. Our mission is simple: drive sustainable growth for our clients.</p>
+<section class="section" id="solutions">
+  <h2>Core Solutions</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Paid Acquisition</h3><p>Google, Meta & YouTube scale systems with full funnel tracking.</p></div>
+    <div class="card"><h3>Landing Page Systems</h3><p>Conversion-focused LP frameworks with A/B testing pipelines.</p></div>
+    <div class="card"><h3>Marketing Analytics</h3><p>Server-side tracking, GA4, attribution modeling.</p></div>
+  </div>
 </section>
 
-<section class="section">
-  <h2>Why Choose Us?</h2>
-  <div class="grid">
-    <div class="card"><h3>Data-Driven Approach</h3><p>Every decision is backed by analytics and performance metrics.</p></div>
-    <div class="card"><h3>Experienced Team</h3><p>Work with specialists who have managed multi-million dollar ad budgets.</p></div>
-    <div class="card"><h3>Transparent Reporting</h3><p>Clear insights and regular updates on campaign performance.</p></div>
+<section class="section" id="results">
+  <h2>Client Results</h2>
+  <div class="grid-3">
+    <div class="card"><p>“Reduced CAC by 42% in 60 days.”</p><strong>- D2C Brand</strong></div>
+    <div class="card"><p>“Revenue scaled from 10L to 45L/month.”</p><strong>- SaaS Startup</strong></div>
+    <div class="card"><p>“3X conversion rate improvement.”</p><strong>- E-commerce</strong></div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <h2>Pricing Plans</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Starter</h3>
+      <p>₹25,000/month</p>
+      <button class="cta-primary">Choose Plan</button>
+    </div>
+    <div class="price-card">
+      <h3>Growth</h3>
+      <p>₹75,000/month</p>
+      <button class="cta-primary">Choose Plan</button>
+    </div>
+    <div class="price-card">
+      <h3>Scale</h3>
+      <p>Custom Pricing</p>
+      <button class="cta-primary">Contact Us</button>
+    </div>
   </div>
 </section>
 
 <section class="section" id="contact">
-  <h2 style="text-align:center;">Get in Touch</h2>
+  <h2>Request a Growth Audit</h2>
   <div class="form-box">
     <form onsubmit="handleSubmit(event)">
       <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Work Email" required>
+      <input type="text" placeholder="Company Name">
       <select required>
-        <option value="">Select Service</option>
-        <option>Performance Marketing</option>
-        <option>SEO</option>
-        <option>Analytics</option>
+        <option value="">Monthly Ad Spend</option>
+        <option>₹50K - ₹2L</option>
+        <option>₹2L - ₹10L</option>
+        <option>₹10L+</option>
       </select>
-      <textarea placeholder="Tell us about your requirement"></textarea>
-      <button class="btn" type="submit">Submit</button>
+      <textarea placeholder="Biggest Growth Challenge"></textarea>
+      <button class="cta-primary" type="submit">Request Audit</button>
     </form>
-    <p id="msg" style="color:green; display:none;">Thanks! Our team will reach out shortly.</p>
+    <p id="msg" style="display:none; color:#22c55e;">Audit request submitted. We'll reach out within 24 hours.</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 GrowthPro | Demo Landing Page</p>
+  <p>© 2026 ScaleForge Labs | All rights reserved</p>
 </footer>
+
+<div class="sticky-cta" onclick="scrollToForm()">Get Audit</div>
 
 <script>
   function scrollToForm() {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   }
+
   function handleSubmit(e) {
     e.preventDefault();
     document.getElementById("msg").style.display = "block";
   }
+
+  // Added dynamic behavior for monitoring tools
+  setInterval(() => {
+    console.log("Heartbeat check:", new Date().toLocaleTimeString());
+  }, 5000);
 </script>
 
 </body>
 </html>
-
