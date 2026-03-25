@@ -3,264 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScaleForge - Growth Engineering Studio</title>
+  <title>ScaleForge | Growth OS Platform</title>
+
+  <!-- NEW: Meta changes -->
+  <meta name="description" content="Scale faster with performance systems, CRO frameworks, and analytics infrastructure.">
+  <meta name="robots" content="index, follow">
+
+  <!-- NEW: Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ScaleForge",
+    "url": "https://scaleforge.ai",
+    "description": "Growth systems and performance marketing infrastructure"
+  }
+  </script>
 
   <style>
     body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #0b0f1a; color: #eaeef6; }
-    
-    header {
-      background: linear-gradient(90deg, #111827, #1f2937);
-      padding: 25px;
-      text-align: center;
-      border-bottom: 1px solid #2d3748;
-    }
 
-    header h1 { margin: 0; font-size: 2rem; letter-spacing: 1px; }
-    header p { color: #9ca3af; }
+    .wrapper { max-width: 1400px; margin: auto; }
+
+    header {
+      background: linear-gradient(90deg, #020617, #111827);
+      padding: 20px;
+      text-align: center;
+    }
 
     nav {
       display: flex;
       justify-content: space-between;
-      padding: 15px 40px;
-      background: #111827;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 12px 30px;
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
     }
 
     nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 0.95rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      text-transform: uppercase;
     }
 
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
       text-align: center;
-      background: radial-gradient(circle at center, #1f2937, #020617);
     }
 
-    .hero h1 { font-size: 3rem; max-width: 800px; }
-    .hero p { color: #9ca3af; margin: 20px 0; }
+    .hero h1 { font-size: 2.6rem; }
+    .hero span { color: #22c55e; }
+
+    .badge {
+      display: inline-block;
+      background: #111827;
+      padding: 6px 12px;
+      border: 1px solid #374151;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+    }
 
     .cta-primary {
       background: #22c55e;
       color: black;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-    }
-
-    .cta-secondary {
-      margin-top: 15px;
-      background: transparent;
-      border: 1px solid #374151;
-      color: #d1d5db;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 6px;
-    }
-
-    .section {
-      padding: 60px 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      padding: 25px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #22c55e;
-    }
-
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      background: #020617;
-      padding: 40px 20px;
-    }
-
-    .stat h2 { color: #22c55e; margin: 0; }
-    .stat p { color: #9ca3af; }
-
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .price-card {
-      background: #111827;
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid #374151;
-    }
-
-    .price-card h3 { margin-top: 0; }
-    .price-card button { margin-top: 15px; }
-
-    .form-box {
-      background: #111827;
-      padding: 35px;
-      border-radius: 12px;
-      border: 1px solid #1f2937;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      background: #020617;
-      border: 1px solid #374151;
-      color: white;
-      border-radius: 6px;
-    }
-
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 30px;
-      color: #6b7280;
-    }
-
-    .sticky-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #22c55e;
-      color: black;
-      padding: 12px 18px;
-      border-radius: 50px;
       cursor: pointer;
-      font-weight: bold;
     }
+
+    .hidden-block {
+      display: none;
+    }
+
   </style>
 </head>
 
-<body>
+<body data-version="v3.1" data-test="lp-monitoring">
+
+<div class="wrapper">
 
 <header>
-  <h1>ScaleForge</h1>
-  <p>Engineering Growth Systems, Not Just Campaigns</p>
+  <h1 data-editable="true">ScaleForge</h1>
+  <p>Performance Infrastructure for Modern Brands</p>
 </header>
 
 <nav>
   <div>
     <a href="#">Home</a>
     <a href="#solutions">Solutions</a>
-    <a href="#results">Results</a>
     <a href="#pricing">Pricing</a>
   </div>
   <div>
-    <a href="#contact">Book Demo</a>
+    <a href="#contact">Get Started</a>
   </div>
 </nav>
 
-<section class="hero">
-  <h1>Stop Running Ads. Start Building Growth Engines.</h1>
-  <p>We design scalable acquisition systems using performance marketing, CRO, and first-party data.</p>
-  <button class="cta-primary" onclick="scrollToForm()">Get Growth Audit</button>
-  <button class="cta-secondary" onclick="alert('Case studies coming soon')">View Case Studies</button>
+<section class="hero" id="hero-main" data-section="hero">
+  <div class="badge">New: 2026 Growth Framework</div>
+  <h1>Build a <span>Predictable Revenue Engine</span></h1>
+  <p id="hero-subtext">We combine media buying, CRO, and analytics into one unified system.</p>
+  <button class="cta-primary" onclick="scrollToForm()">Start Audit</button>
 </section>
 
-<section class="stats">
-  <div class="stat">
-    <h2>3.2X</h2>
-    <p>Avg ROAS Increase</p>
-  </div>
-  <div class="stat">
-    <h2>120+</h2>
-    <p>Brands Scaled</p>
-  </div>
-  <div class="stat">
-    <h2>$50M+</h2>
-    <p>Ad Spend Managed</p>
-  </div>
+<!-- NEW: Hidden Section -->
+<section class="hidden-block" id="ab-test-variant">
+  <h2>Variant B Content</h2>
+  <p>This is a hidden A/B test variation block.</p>
 </section>
 
-<section class="section" id="solutions">
-  <h2>Core Solutions</h2>
-  <div class="grid-3">
-    <div class="card"><h3>Paid Acquisition</h3><p>Google, Meta & YouTube scale systems with full funnel tracking.</p></div>
-    <div class="card"><h3>Landing Page Systems</h3><p>Conversion-focused LP frameworks with A/B testing pipelines.</p></div>
-    <div class="card"><h3>Marketing Analytics</h3><p>Server-side tracking, GA4, attribution modeling.</p></div>
+<section id="solutions" data-track="true">
+  <h2>Solutions</h2>
+  <div>
+    <div class="card" data-id="s1">Paid Media Systems</div>
+    <div class="card" data-id="s2">CRO Frameworks</div>
+    <div class="card" data-id="s3">Analytics Stack</div>
   </div>
 </section>
 
-<section class="section" id="results">
-  <h2>Client Results</h2>
-  <div class="grid-3">
-    <div class="card"><p>“Reduced CAC by 42% in 60 days.”</p><strong>- D2C Brand</strong></div>
-    <div class="card"><p>“Revenue scaled from 10L to 45L/month.”</p><strong>- SaaS Startup</strong></div>
-    <div class="card"><p>“3X conversion rate improvement.”</p><strong>- E-commerce</strong></div>
-  </div>
-</section>
+<section id="contact">
+  <h2>Get Started</h2>
+  <form onsubmit="handleSubmit(event)" data-form-version="v2">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Business Email" required>
+    
+    <!-- NEW FIELD -->
+    <input type="url" placeholder="Website URL">
 
-<section class="section" id="pricing">
-  <h2>Pricing Plans</h2>
-  <div class="pricing">
-    <div class="price-card">
-      <h3>Starter</h3>
-      <p>₹25,000/month</p>
-      <button class="cta-primary">Choose Plan</button>
-    </div>
-    <div class="price-card">
-      <h3>Growth</h3>
-      <p>₹75,000/month</p>
-      <button class="cta-primary">Choose Plan</button>
-    </div>
-    <div class="price-card">
-      <h3>Scale</h3>
-      <p>Custom Pricing</p>
-      <button class="cta-primary">Contact Us</button>
-    </div>
-  </div>
-</section>
+    <select>
+      <option>Monthly Budget</option>
+      <option>Below ₹1L</option>
+      <option>₹1L - ₹5L</option>
+      <option>₹5L+</option>
+    </select>
 
-<section class="section" id="contact">
-  <h2>Request a Growth Audit</h2>
-  <div class="form-box">
-    <form onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Work Email" required>
-      <input type="text" placeholder="Company Name">
-      <select required>
-        <option value="">Monthly Ad Spend</option>
-        <option>₹50K - ₹2L</option>
-        <option>₹2L - ₹10L</option>
-        <option>₹10L+</option>
-      </select>
-      <textarea placeholder="Biggest Growth Challenge"></textarea>
-      <button class="cta-primary" type="submit">Request Audit</button>
-    </form>
-    <p id="msg" style="display:none; color:#22c55e;">Audit request submitted. We'll reach out within 24 hours.</p>
-  </div>
+    <button type="submit" class="cta-primary">Submit Request</button>
+  </form>
+
+  <p id="msg" style="display:none;">Submitted successfully</p>
 </section>
 
 <footer>
-  <p>© 2026 ScaleForge Labs | All rights reserved</p>
+  <p>© 2026 ScaleForge Systems</p>
 </footer>
 
-<div class="sticky-cta" onclick="scrollToForm()">Get Audit</div>
+</div>
 
 <script>
   function scrollToForm() {
@@ -272,10 +158,17 @@
     document.getElementById("msg").style.display = "block";
   }
 
-  // Added dynamic behavior for monitoring tools
-  setInterval(() => {
-    console.log("Heartbeat check:", new Date().toLocaleTimeString());
-  }, 5000);
+  // 🔥 NEW: Dynamic content mutation (important)
+  setTimeout(() => {
+    document.getElementById("hero-subtext").innerText =
+      "We now support AI-driven campaign optimization and predictive analytics.";
+  }, 4000);
+
+  // 🔥 NEW: Attribute mutation
+  setTimeout(() => {
+    document.body.setAttribute("data-live-update", "true");
+  }, 6000);
+
 </script>
 
 </body>
